@@ -1,0 +1,45 @@
+
+<Gui>:
+    orientation: 'vertical'
+    padding: 15, 20, 15, 30
+    BoxLayout:
+        size_hint: 1, 0.09 #второе значение по высоте
+        Label:
+            text: 'Search...'
+            color: 1,1,1,1
+            size_hint: 0.5, 1
+            text_size: self.size
+            padding_y: min(self.size)/2
+        GridLayout:
+            size_hint: 0.5, 1
+        Button:
+            size_hint: None, None
+            background_normal: 'icon.png'
+            size: min(self.parent.size)*1.1, min(self.parent.size)*1.1
+            border: 1,1,1,1
+    GridLayout:
+        size_hint: 0.1, 0.5
+    BoxLayout:
+        spacing: 10
+        pos_hint: {'center_x':0.5, 'top':1}
+        size_hint: 1, 0.8
+        Button:
+            pos_hint: {'bottom':1}
+            size_hint: None, None
+            size: min(self.parent.size)/6, min(self.parent.size)/6
+            background_normal: 'preve.png'
+            border: 1,1,1,1
+        GridLayout:
+        Button:
+            pos_hint: {'bottom':1}
+            size_hint: None, None
+            size: min(self.parent.size)/6, min(self.parent.size)/6
+            background_normal: 'play.png'
+            border: 1,1,1,1
+        GridLayout:
+        Button:
+            pos_hint: {'bottom':1}
+            size_hint: None, None
+            size: min(self.parent.size)/6, min(self.parent.size)/6
+            background_normal: 'next.png'
+            border: 1,1,1,1
