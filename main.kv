@@ -2,9 +2,13 @@
 <Gui>:
     orientation: 'vertical'
     padding: 15, 20, 15, 30
+
+    label_widget: label
+
     BoxLayout:
         size_hint: 1, 0.09 #второе значение по высоте
         Label:
+            id: label
             text: 'Search...'
             color: 1,1,1,1
             size_hint: 0.5, 1
@@ -17,6 +21,8 @@
             background_normal: 'icon.png'
             size: min(self.parent.size)*1.1, min(self.parent.size)*1.1
             border: 1,1,1,1
+            on_release:
+                root.connect_server()
     GridLayout:
         size_hint: 0.1, 0.5
     BoxLayout:
@@ -36,6 +42,8 @@
             size: min(self.parent.size)/6, min(self.parent.size)/6
             background_normal: 'play.png'
             border: 1,1,1,1
+            on_release:
+                root.pause()
         GridLayout:
         Button:
             pos_hint: {'bottom':1}
